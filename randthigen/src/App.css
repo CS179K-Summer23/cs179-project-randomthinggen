@@ -100,4 +100,5 @@
 .row:last-child {
   position: absolute;
   bottom: 0;
+  border-top: 2px solid #5e5f5f;
 }
