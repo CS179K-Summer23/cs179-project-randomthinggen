@@ -1,38 +1,103 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  min-height: 100vh;
+  text-align: left;
+  background-color: rgb(204, 204, 204);
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.title {
+  position: relative;
+  align-items: left;
+  justify-content: top;
+  padding-left: 40%;
+  font-size: calc(10px + 2vmin);
+  color: darkslategray;
+  text-shadow: 2px 2px 3px darkgray;
+}
+
+.selectors {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  font-size: medium;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.App-body {
+  display: flex;
+}
+
+.descBox {
+  position: relative;
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  min-height: 50px;
+  margin-left: 25%;
+  margin-right: 10%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgb(255, 255, 255);
+}
+
+.Sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #141414;
+}
+
+.SidebarList {
+  list-style-type: none;
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.SidebarList .row {
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
   color: white;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.SidebarList .row:hover {
+  cursor: pointer;
+  background-color: #5e5f5f;
+}
+.SidebarList #active {
+  background-color: #141414;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.row #icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row #title {
+  flex: 70%;
+
+}
+.row:last-child {
+  position: absolute;
+  bottom: 0;
 }
