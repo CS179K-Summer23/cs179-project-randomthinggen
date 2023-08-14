@@ -27,6 +27,15 @@
   justify-content: center;
 }
 
+.gButt {
+  display: flex;
+  flex-direction: row;
+  font-size: medium;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
 .App-body {
   display: flex;
 }
