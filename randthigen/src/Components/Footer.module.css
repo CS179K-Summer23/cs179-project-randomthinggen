@@ -1,0 +1,45 @@
+.test {
+    position: relative;
+  }
+  .addressParent {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--gap-3xs);
+    font-size: var(--font-size-xs);
+  }
+  .addressParent,
+  .frameParent,
+  .testParent {
+    display: flex;
+    align-items: flex-start;
+  }
+  .testParent {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--gap-11xl);
+  }
+  .frameParent {
+    width: 35.44rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .bimagicIcon {
+    position: relative;
+    width: 13.75rem;
+    height: 13.75rem;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .footer {
+    align-self: stretch;
+    background: linear-gradient(180deg, #faeaca, #efcfa4);
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-31xl);
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: left;
+    font-size: var(--font-size-5xl);
+    color: var(--color-saddlebrown);
+    font-family: var(--font-im-fell-english);
+  }

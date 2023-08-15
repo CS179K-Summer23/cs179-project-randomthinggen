@@ -1,54 +1,52 @@
-import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Sidebar from "./Components/Sidebar";
+import {
+  Routes,
+  Route,
+  useNavigationType,
+  useLocation,
+} from "react-router-dom";
+import LandingPage from "./Pages/LandingPage";
+import { useEffect } from "react";
 
 function App() {
+  const action = useNavigationType();
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  useEffect(() => {
+    if (action !== "POP") {
+      window.scrollTo(0, 0);
+    }
+  }, [action, pathname]);
+
+  useEffect(() => {
+    let title = "";
+    let metaDescription = "";
+
+    switch (pathname) {
+      case "/":
+        title = "";
+        metaDescription = "";
+        break;
+    }
+
+    if (title) {
+      document.title = title;
+    }
+
+    if (metaDescription) {
+      const metaDescriptionTag = document.querySelector(
+        'head > meta[name="description"]'
+      );
+      if (metaDescriptionTag) {
+        metaDescriptionTag.content = metaDescription;
+      }
+    }
+  }, [pathname]);
+
   return (
-    <BrowserRouter>
-      <div className="App"> 
-       
-        <header className="App-header">
-          <div className='title'>
-            RandomThingGen
-          </div>
-          
-          <div className="selectors">
-            <input 
-              type="radio" 
-              name="selector"/>
-            PERSON
-            <input 
-              type="radio" 
-              name="selector"/>
-            PLACE
-            <input 
-              type="radio" 
-              name="selector"/>
-            THING
-          </div>
-        </header>
-        <div className='descBox'>
-          Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt 
-          ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, 
-          quis nostrud exercitation 
-          ullamco laboris nisi ut 
-          aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in 
-          reprehenderit in voluptate 
-          velit esse cillum dolore 
-          eu fugiat nulla pariatur. 
-          Excepteur sint occaecat cupidatat 
-          non proident, sunt in culpa qui 
-          officia deserunt mollit anim id est laborum.
-        </div>
-        <Sidebar />
-      </div>
-      
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+    </Routes>
   );
 }
-
 export default App;

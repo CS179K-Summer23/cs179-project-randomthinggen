@@ -1,0 +1,65 @@
+.generatecontainer1 {
+    margin: 0;
+  }
+  .generatecontainer {
+    align-self: stretch;
+    position: relative;
+    z-index: 0;
+  }
+
+  .generatecontainerstyles {
+    margin: 0;
+    align-self: stretch;
+    position: relative;
+    z-index: 0;
+    
+  }
+  .save {
+    position: relative;
+    font-size: var(--font-size-sm);
+    font-family: var(--font-im-fell-english);
+    color: var(--color-lightcyan);
+    text-align: left;
+  }
+  .materialSymbolssaveIcon {
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .saveParent {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-8xs) var(--padding-xl);
+    background-color: transparent;
+    margin: 0 !important;
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    border-radius: var(--br-80xl);
+    background: linear-gradient(180deg, #9bb6b3, #5f888a);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-3xs);
+    z-index: 1;
+  }
+  .singlegeneratecontainer {
+    align-self: stretch;
+    border-radius: var(--br-11xl);
+    background: linear-gradient(180deg, #faeaca, #efcfa4);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-3xs) var(--padding-6xl) var(--padding-31xl);
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    text-align: left;
+    font-size: var(--font-size-sm);
+    color: var(--color-black);
+    font-family: var(--font-im-fell-english);
+  }
