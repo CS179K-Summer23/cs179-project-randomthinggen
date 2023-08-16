@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import SavedResultsContainer from "../Components/SavedResultsContainer";
-import SettingsFormContainer from "../Components/SettingsFormContainer";
-import GenerateContainer from "../Components/GenerateContainer";
-import ContainerFooter from "../Components/ContainerFooter";
+import SavedResultsContainer from "../components/SavedResultsContainer";
+import SettingsFormContainer from "../components/SettingsFormContainer";
+import GenerateContainer from "../components/GenerateContainer";
+import ContainerFooter from "../components/ContainerFooter";
 import styles from "./LandingPage.module.css";
-import generatecontainerstyles from "../Components/GenerateContainer.module.css"; // Adjust the import path
+import generatecontainerstyles from "../components/GenerateContainer.module.css"; // Adjust the import path
 
 const LandingPage = () => {
 
