@@ -1,4 +1,22 @@
-As a user, I want to be able to decide whether or not I want my result to be AI-generated#6
--  The prompt result should be AI-generated when chosen to use AI
--  AI results should be relevant to the prompt
--   The prompt result should provide a formulated, stricter layout 
+As a user, I want to bookmark/favorite descriptions so that I can save them/might use later#5
+-  Bookmarked descriptions should be saved
+-  Bookmarked descriptions should not be altered any differently from when they were generated
+-  More than one description can be bookmarked
+
+1. No Description
+  Input
+    - User presses the add-bookmark button
+  Expected Output
+    - System makes the pop-up that notifies there is no description
+
+2. Bookmark/Favorite Already Exists
+  Input
+    - User presses the add-bookmark button
+  Expected Output
+    - System replaces the existing one with new description 
+
+3. Empty Bookmark/Favorite
+  Input
+    - User presses the add-bookmark button
+  Expected Output
+    - System replaces the empty bookmark with new description 

@@ -1,4 +1,22 @@
-As a user, I want to bookmark/favorite descriptions so that I can save them/might use later#5
--  Bookmarked descriptions should be saved
--  Bookmarked descriptions should not be altered any differently from when they were generated
--  More than one description can be bookmarked
+As a user, I want to download the content of sidebar as JSON format
+- Download button appears on sidebar
+- JSON is downloaded when button is pressed
+- Content of JSON should reflect content of sidebar
+
+1. No Bookmark
+  Input
+    - User presses the download button
+  Expected Output
+    - System makes the pop-up that notifies there is no bookmark
+
+2. No Favorite
+  Input
+    - User presses the download button
+  Expected Output
+    - System makes the pop-up that notifies there is no favorite
+
+3. Bookmark and Favorite Exist
+  Input
+    - User presses the download button
+  Expected Output
+    - System sends the user JSON file.

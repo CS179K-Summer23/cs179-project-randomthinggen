@@ -1,4 +1,0 @@
-As a user, I want to download the content of sidebar as JSON format#8
-- Download button appears on sidebar
-- JSON is downloaded when button is pressed
-- Content of JSON should reflect content of sidebar
