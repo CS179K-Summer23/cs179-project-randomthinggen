@@ -21,13 +21,18 @@ NodeJS, React, likely Express
 | 6        | Download contents of sidebar as JSON                                                                                                                            | 4            |
 | 5        | Random writing prompt generator that incorporates items from other generators                                                                                   | 10           |
 | 4        | Generators branch off from each other (generate person who lives in generated location or object owned by generated person, etc)                                | 8            |
-| 3        | Change website theme, changing theme of prompts as well (fantasy/sci-fi/etc)                                                                                    | 10           |
+| 3        | Change website theme, changing theme of prompts as well (fantasy/sci-fi)                                                                                    | 10           |
 
 ## User Stories
-- As a user, I want to be able to enter an input that randomly generates a character, location, or object.
-- As a user, I want to be able to decide whether my input shall be generated into a character, location, or object.
-- As a user, I want to be able to see past generated results
-- As a user, I want to be able to decide whether or not I want my result to be AI-generated
-- As a user, I want to bookmark/favorite descriptions so that I can save them/use them later
-- As a user, I want to download my bookmarks/favorites in JSON format
-- As a user, I want to change the theme of the result I receive according to the website theme
+1. As a user, I want to be able to enter an input that randomly generates a character, location, or object.
+2. As a user, I want to be able to decide whether my input shall be generated into a character, location, or object.
+3. As a user, I want to be able to see past generated results
+4. As a user, I want to be able to decide whether or not I want my result to be AI-generated
+5. As a user, I want to bookmark/favorite descriptions so that I can save them/use them later
+6. As a user, I want to download my bookmarks/favorites in JSON format
+7. As a user, I want to change the theme of the result I receive according to the website theme
+8. As a user, I want to see my results with as little delay as possible.
+9. As a user, I want the things I enter into my AI prompt to be reflected in the result I receive.
+10. As a user, I want there to be a large amount of possible true-random results.
+11. As a user, I want to log in to the randomgen website to keep and see my histories.
+12. As a user, I want to be able to provide information that will be reflected in my results.

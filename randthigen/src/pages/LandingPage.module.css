@@ -1,0 +1,126 @@
+.randomthinggen {
+  position: relative;
+  color: var(--color-saddlebrown);
+}
+.selectionmenuChild {
+  position: relative;
+  border-right: 1px solid var(--color-wheat);
+  box-sizing: border-box;
+  width: 0.06rem;
+  height: 1.19rem;
+}
+.profile,
+.saved {
+  position: relative;
+}
+.profile {
+  display: inline-block;
+  width: 2.5rem;
+  flex-shrink: 0;
+}
+.selectionmenu {
+  width: 27.44rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.login {
+  position: relative;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-im-fell-english);
+  color: var(--color-lightcyan);
+  text-align: left;
+}
+.materialSymbolsloginIcon {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.loginbutton,
+.tabcontainer {
+  border-radius: var(--br-80xl);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.loginbutton {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-8xs) var(--padding-xl);
+  background-color: transparent;
+  background: linear-gradient(180deg, #9bb6b3, #5f888a);
+  justify-content: center;
+  gap: var(--gap-3xs);
+}
+.tabcontainer {
+  align-self: stretch;
+  background: linear-gradient(180deg, #faeaca, #efcfa4);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding: var(--padding-8xs) var(--padding-8xs) var(--padding-8xs)
+    var(--padding-xl);
+  justify-content: space-between;
+  z-index: 0;
+}
+.generationscontainer {
+  align-self: stretch;
+  flex: 1;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-mini);
+  z-index: 3;
+}
+.fantasy,
+.generationscontainer,
+.privacyPolicyParent {
+  display: flex;
+  justify-content: flex-start;
+}
+.fantasy {
+  align-self: stretch;
+  height: 64.06rem;
+  flex-direction: column;
+  padding: var(--padding-xl) 15rem;
+  box-sizing: border-box;
+  align-items: center;
+  position: relative;
+  gap: 4.25rem;
+  background-image: url(/public/hero@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.privacyPolicyParent {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+.copyright,
+.landingPage {
+  display: flex;
+  align-items: center;
+}
+.copyright {
+  align-self: stretch;
+  background-color: #131d24;
+  flex-direction: row;
+  padding: var(--padding-6xl) var(--padding-31xl);
+  justify-content: space-between;
+  color: var(--color-aliceblue);
+}
+.landingPage {
+  position: relative;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-tan);
+  font-family: var(--font-im-fell-english);
+}

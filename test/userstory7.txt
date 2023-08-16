@@ -1,4 +1,21 @@
-As a user, I want to be able to see past generated results#7
-- Previous prompt's results in the same session are shown
-- Be able to scroll up to see these old results
-- Old results are not deleted upon entering a new input for a prompt
+As a user, I want to change theme of prompt according to the website theme
+- website theme is able to be changed
+- theme of prompt changes with website theme
+
+1. First Time Visitor
+  Input
+    - 
+  Expected Output
+    - System shows user the default website theme.
+
+2. Fantasy Theme Selection
+  Input
+    - User selects the fantasy theme
+  Expected Output
+    - System shows user the fantasy theme.
+
+3. Sci-Fi Theme Selection
+  Input
+    - User selects the sci-fi theme
+  Expected Output
+    - System shows user the sci-fi theme.

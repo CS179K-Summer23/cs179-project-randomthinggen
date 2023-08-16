@@ -4,7 +4,8 @@ import {
   useNavigationType,
   useLocation,
 } from "react-router-dom";
-import LandingPage from "./Pages/LandingPage";
+
+import LandingPage from "./pages/LandingPage";
 import { useEffect } from "react";
 
 function App() {
@@ -49,4 +50,5 @@ function App() {
     </Routes>
   );
 }
+
 export default App;

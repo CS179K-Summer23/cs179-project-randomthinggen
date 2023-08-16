@@ -1,4 +1,23 @@
-As a user, I want to be able to enter an input that randomly generates a character, location, or object.
--  is able to take in an input
--  the input only accepts string
-- input is correctly displayed as name of randomly generated thing
+As a user, I want to be able to decide whether my input shall be generated into a character, location, or object#3
+-  I can choose to process my input as a character
+-  I can choose to process my input as a location
+-  I can choose to process my input as an object
+-  The choice will show a relevant corresponding result(e.g., if character is chosen, it will provide character description, if location is chosen, location will be described, if object is chosen, object will be described).
+
+1. Character Generation
+  Input
+    - Request for a charater
+  Expected Output
+    - A random charater is generated
+
+2. Location Generation
+  Input
+    - Request for a Location
+  Expected Output
+    - A random Location is generated
+
+3. Object Generation
+  Input
+    - Request for a Object
+  Expected Output
+    - A random Object is generated

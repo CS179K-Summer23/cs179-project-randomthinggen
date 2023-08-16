@@ -1,0 +1,34 @@
+As a user, I want to be able to enter an input that randomly generates a character, location, or object.
+-  is able to take in an input
+-  the input only accepts string
+- input is correctly displayed as name of randomly generated thing
+
+1. No Desired Object(charater, location or object) Seletected
+  Input
+    - User does not select the desired obejct but entered the input
+  Expected Output
+    - System prompts user to select a desired object
+
+2. Empty String
+  Input
+    - User entered empty string but clicked the output
+  Expected Output
+    - System prompts user to input some valid strings
+
+3. Character Generation
+  Input
+    - Request for a charater
+  Expected Output
+    - A random charater is generated
+
+4. Location Generation
+  Input
+    - Request for a Location
+  Expected Output
+    - A random Location is generated
+
+5. Object Generation
+  Input
+    - Request for a Object
+  Expected Output
+    - A random Object is generated
