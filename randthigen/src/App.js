@@ -305,28 +305,28 @@ function rngsent() {
   else {
     used.push(rng);
   }
-  if (rng == 0) {
+  if (rng === 0) {
     res = "In their free time, they often " + hobG() + ". ";
   }
-  else if (rng == 1) {
+  else if (rng === 1) {
     res = "They're very proud of how " + adG() + " they are. ";
   }
-  else if (rng == 2) {
+  else if (rng === 2) {
     res = "They try their best not to be " + adG() + ", considering it a quality they're ashamed of. ";
   }
-  else if (rng == 3) {
+  else if (rng === 3) {
     res = "They once " + taG() + ", but nobody believes them when they say so. ";
   }
-  else if (rng == 4) {
+  else if (rng === 4) {
     res = "They have never told anyone, but " + seG() + ". ";
   }
-  else if (rng == 5) {
+  else if (rng === 5) {
     res = "Their greatest fear is " + feG() + ". ";
   }
-  else if (rng == 6) {
+  else if (rng === 6) {
     res = "Their most dearly-held dream is " + hopG() + ". ";
   }
-  else if (rng == 7) {
+  else if (rng === 7) {
     res = "Growing up, they were " + adG() + ", but they have grown out of it. ";
   }
   else {
@@ -422,7 +422,6 @@ function prepG() {
     'is known for its many mysteries',
     'is largely overlooked among its more interesting peers',
     'is known for playing host to many untimely and suspicious deaths',
-    'was the site of a thousand ancient battles',
     'is rife with political corruption and nepotism',
     'is basically owned by a prominent crime family',
     'is home to great natural beauty',
@@ -508,7 +507,117 @@ function padG() {
 }
 
 function plrngsent() {
-  return "Test sentence. ";
+  var rng = Math.floor(Math.random() * 6);
+  var res;
+  if (used.includes(rng)) {
+    while (used.includes(rng)) {
+      rng = Math.floor(Math.random() * 6);
+    }
+    used.push(rng);
+  }
+  else {
+    used.push(rng);
+  }
+  if (rng === 0) {
+    res = "It has a famous " + pthG() + ". ";
+  }
+  else if (rng === 1) {
+    res = "It was once " + padG() + ", but it has recently changed. ";
+  }
+  else if (rng === 2) {
+    res = "Those who live there are known for being " + adG() + ". ";
+  }
+  else if (rng === 3) {
+    res = "It's widely known for its " + pgoG() + ". ";
+  }
+  else if (rng === 4) {
+    res = "Its entire population is engaged in a conspiracy to " + pcoG() + ". ";
+  }
+  else if (rng === 5) {
+    res = "It was once the site of " + phiG() + ". ";
+  }
+  else {
+    res = "Every year, its people " + panG()  + ". ";
+  }
+  return res;
+}
+
+function pthG() {
+  var a = [
+    'monument to a historical figure',
+    'hot spring',
+    'pastry shop',
+    'party scene',
+    'celebrity\'s home',
+    'inn in which great heroes once met',
+    'mine from which vast quantities of mithral are excavated',
+    'grove of many fruit trees',
+    'pit that is said to lead directly to the underworld',
+    'system of local government'];
+  return a[Math.floor(Math.random()*a.length)];
+}
+
+function pgoG() {
+  var a = [
+    'pastries',
+    'ore',
+    'glasswork',
+    'enchanted items',
+    'weapons',
+    'lumber',
+    'furniture',
+    'waste products',
+    'fine dining',
+    'tourist attractions',
+    'crops'];
+  return a[Math.floor(Math.random()*a.length)];
+}
+
+function pcoG() {
+  var a = [
+    'ensure that everyone who visits has a nice time',
+    'ensure that everyone who visits has a terrible time',
+    'revive the Dark Lord',
+    'find a great hero to slay the Dark Lord',
+    'keep property prices low',
+    'keep property prices high',
+    'scam visitors out of their money',
+    'trick visitors into taking more money with them when they leave'];
+  return a[Math.floor(Math.random()*a.length)];
+}
+
+function phiG() {
+  var a = [
+    'the birth of a great ruler',
+    'the death of a great ruler',
+    'a terrible battle in which thousands died',
+    'the founding of a nation',
+    'the founding of a religion',
+    'the discovery of a new method of frying food',
+    'the discovery of a new method of forging metal',
+    'the discovery of a new method of sewing',
+    'the creation of a new art form',
+    'the creation of a new alloy of metals',
+    'the creation of a new type of magic',
+    'the casting of a great spell',
+    'the casting of a terrible spell'];
+  return a[Math.floor(Math.random()*a.length)];
+}
+
+function panG() {
+  var a = [
+    'celebrate a festival of lights',
+    'celebrate a festival of darkness',
+    'have a theologically distinct winter solstice festival',
+    'have a festival for the longest day of the year',
+    'celebrate the day of harvest',
+    'celebrate the first day of spring',
+    'celebrate a festival of winds',
+    'pray for a full day for good harvest',
+    'have a grand feast to which all are invited',
+    'sacrifice a goat to the gods',
+    'have a lively series of games to decide who gets to lead'];
+  return a[Math.floor(Math.random()*a.length)];
 }
 
 // thing gen functions
@@ -670,7 +779,20 @@ function ttypeG() {
 }
 
 function trepG() {
-  return "Test";
+  var a = [
+    'its use in a great battle',
+    'its use by a great hero',
+    'its use by a great evil',
+    'the terrible deeds it has been party to',
+    'nothing — it has been hidden since its creation, for fear of its power',
+    'nothing — it was cast off, considered a mistake by its creator',
+    'being supposedly desroyed for its power',
+    'being kind of weak',
+    'not being its creator\'s best work',
+    'being its creator\'s least impressive work',
+    'being an early, unpolished work by its creator',
+    'being its creator\'s first and best work'];
+    return a[Math.floor(Math.random()*a.length)];
 }
 
 function trngsent() {
@@ -734,7 +856,7 @@ function App() {
         </div>
       </header>
       <body>
-        <div className='descBox' id='descs'>Hello!!</div>
+        <div className='descBox' id='descs'>Select an option and press "Generate" to make something!</div>
       </body>
     </div>
   );
