@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const multer = require('multer');
 //const API_KEY = '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';
-const API_KEY = '';
+const API_KEY = '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';
 
 const { Chat } = require('../Model/Chat');
 const { Chat_no_ai } = require('../Model/Chat_no_ai');

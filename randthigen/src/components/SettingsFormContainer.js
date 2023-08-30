@@ -9,7 +9,7 @@ import styles from './SettingsFormContainer.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import ChatGPTApi from './ChatGPTApi';
 import { useState, useEffect } from 'react';
-
+import { newGen } from './newGen';
 import {
 	genreSelect,
 	generateSelect,
@@ -22,12 +22,11 @@ const SettingsFormContainer = (props) => {
 	const user = useSelector((state) => state.user);
 	const [selectedGenre, setSelectedGenre] = useState('Fantasy');
 	const [selectedGenerateType, setSelectedGenerateType] = useState('Person'); // ADDED (Default value "Person")
-	const [selectedAI, setSelectedAI] = useState('On'); // ADDED (Default value "On")
 
 	const dispatch = useDispatch();
 
 	//const [genre, setGenre] = useState('fantasy');
-	const handleGenreChange = (event, value) => {
+	const handleGenreChange = async (event, value) => {
 		setSelectedGenre(
 			event.target.value,
 			dispatch(genreSelect({ genre: event.target.value }))
@@ -40,36 +39,15 @@ const SettingsFormContainer = (props) => {
 			dispatch(generateSelect({ generate: event.target.value }))
 		);
 	};
-	const handleAIChange = (event, value) => {
-		setSelectedAI(
-			event.target.value,
-			dispatch(AISelect({ AI: event.target.value }))
-		);
-	};
-	const msg = `
-	generate random thing with these conditions: 
-	Genre: ${selection.genre}
-	Object: ${selection.generate}
-	height: tall
-	build: thin
-	job: welder
-	hobbies: reading, writing
-	limit response to be two paragraph
-	`;
 	//props.setMessage(msg);
+
 	useEffect(() => {
-		const msg = `
-		generate random thing with these conditions: 
-		Genre: ${selection.genre}
-		Object: ${selection.generate}
-		height: tall
-		build: thin
-		job: welder
-		hobbies: reading, writing
-		limit response to be two paragraph
-		`;
-		props.setMessage(msg);
-	}, [selectedGenre, selectedGenerateType, selectedAI]);
+    (async () => { 
+    const res = await newGen();
+    const msg = res + ` Refine this description to three paragraphs, expanding the reader's understanding of the person/place/thing described and providing new information consistent with the information provided.`;
+    props.setMessage(msg);
+  })();
+	}, [selectedGenre, selectedGenerateType]);
 	//console.log(message);
 	// const getMessages = async () => {
 	// 	const options = {
@@ -106,10 +84,10 @@ const SettingsFormContainer = (props) => {
 		<div className={styles.settingscontainer}>
 			<h1 className={styles.settings}>Settings</h1>
 			{/* onClick={ChatGPTApi generateMessage={message}} */}
-			{selection.AI === 'Off' && (
+			{(
 				<button
 					className={styles.generatebutton}
-					onClick={props.onGenerateButtonClick}
+					onClick={ChatGPTApi.getMessages}
 				>
 					<div className={styles.generate}>Generate!</div>
 					<img className={styles.mdimagicIcon} alt='' src='/mdimagic.svg' />
@@ -235,53 +213,20 @@ const SettingsFormContainer = (props) => {
 					/>
 				}
 			/>
-			<h2 className={styles.ai}>AI:</h2>
-			<div className={styles.airadiobuttons}>
-				<FormControlLabel
-					value='On' //ADDED
-					label='On'
+      <FormControlLabel
+					value='Prompt' //ADDED
+					label='Prompt'
 					labelPlacement='end'
 					control={
 						<Radio
 							color='primary'
 							size='medium'
-							checked={selectedAI === 'On'} //ADDED
-							onChange={handleAIChange} //ADDED
+							id='prompt'
+							checked={selectedGenerateType === 'Prompt'} //ADDED
+							onChange={handleGenerateChange} //ADDED
 						/>
 					}
 				/>
-				<FormControlLabel
-					value='Off' //ADDED
-					label='Off'
-					labelPlacement='end'
-					control={
-						<Radio
-							color='primary'
-							size='medium'
-							checked={selectedAI === 'Off'} //ADDED
-							onChange={handleAIChange}
-						/>
-					} //ADDED
-				/>
-			</div>
-			<div className={styles.aisettings}>
-				<div className={styles.aiinput}>
-					Height:
-					<div className={styles.aisettingtextbox}>Tall</div>
-				</div>
-				<div className={styles.aiinput}>
-					Build:
-					<div className={styles.aisettingtextbox}>Thin</div>
-				</div>
-				<div className={styles.aiinput}>
-					Job:
-					<div className={styles.aisettingtextbox}>Welder</div>
-				</div>
-				<div className={styles.aiinput}>
-					Hobbies:
-					<div className={styles.aisettingtextbox}>Reading, Writing</div>
-				</div>
-			</div>
 
 			{/* <ImageUpload setImage={setImage} /> */}
 		</div>
